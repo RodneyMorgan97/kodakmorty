@@ -1,0 +1,46 @@
+.project {
+  position: relative;
+}
+
+.project-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  color: white;
+  font-family: Impact, Charcoal, sans-serif;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+
+.project:hover .project-title {
+  display: inline;
+}
+
+.image {
+  border-radius: 8px;
+}
+
+
+.content-overlay {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.project:hover .content-overlay {
+  opacity: 1;
+}

@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.Header {
+  display: grid;
+  grid-template-areas: "logo nav";
+  position: fixed;
+  top: 0;
+  max-height: 70px;
+  width: 100vw;
+  background-color: #3a3a3a;
+}
+
+.logo {
+  height: 70px;
+}
+
+.Nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  align-items: center;
+  justify-items: center;
+}
+.item {
+  color: white;
+  text-decoration: none;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.item:hover {
+  color: #105840;
+}
+
+.Burger { 
+  display: none;
+  margin: 0 20px 0 0;
+  padding: 0;
+  justify-self: end;
+  align-self: center;
+  border: none;
+  background: none;
+  outline: none;
+  transition: 0.1s;
+}
+
+@media (max-width: 700px) {
+  .Header {
+    grid-template-areas: "logo burger" "nav nav";
+  }
+
+  .Nav {
+    grid-template-rows: repeat(7, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+  }
+
+  .Burger {
+    display: inline;
+    
+  }
+
+}
+
+.NavAnimation-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+.NavAnimation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 350ms, transform 350ms;
+}
+.NavAnimation-exit {
+  opacity: 1;
+}
+.NavAnimation-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 350ms, transform 350ms;
+}
